@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1010" height="580" viewBox="0 0 1010 580" role="img" aria-label="AEGIS private chain demo: output of make status and make selftest">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#161b22"/><stop offset="1" stop-color="#0d1117"/>
+    </linearGradient>
+  </defs>
+  <rect width="1010" height="580" rx="14" fill="url(#bg)" stroke="#30363d"/>
+  <rect width="1010" height="42" rx="14" fill="#21262d"/>
+  <rect y="28" width="1010" height="14" fill="#21262d"/>
+  <circle cx="26" cy="21" r="6" fill="#ff5f57"/>
+  <circle cx="48" cy="21" r="6" fill="#febc2e"/>
+  <circle cx="70" cy="21" r="6" fill="#28c840"/>
+  <text x="505" y="26" text-anchor="middle" fill="#8b949e" font-size="13" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'DejaVu Sans Mono', monospace">private-chain — bash</text>
+  <g font-size="14.5" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" xml:space="preserve">
+    <text x="26" y="82" fill="#7ee787" font-weight="600"><tspan font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'DejaVu Sans Mono', monospace">$&#160;make&#160;status</tspan></text>
+    <text x="26" y="109" fill="#e6edf3"><tspan font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'DejaVu Sans Mono', monospace">chainId&#160;&#160;&#160;&#160;&#160;&#160;:&#160;20270</tspan></text>
+    <text x="26" y="136" fill="#e6edf3"><tspan font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'DejaVu Sans Mono', monospace">blockNumber&#160;&#160;:&#160;289</tspan></text>
+    <text x="26" y="163" fill="#e6edf3"><tspan font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'DejaVu Sans Mono', monospace">peerCount&#160;&#160;&#160;&#160;:&#160;0</tspan></text>
+    <text x="26" y="190" fill="#e6edf3"><tspan font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'DejaVu Sans Mono', monospace">mining&#160;&#160;&#160;&#160;&#160;&#160;&#160;:&#160;true</tspan></text>
+    <text x="26" y="217" fill="#e6edf3"><tspan font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'DejaVu Sans Mono', monospace">signers&#160;&#160;&#160;&#160;&#160;&#160;:&#160;0x94200cd56fc6346b8b555c653fc8227cfbc297f8</tspan></text>
+    <text x="26" y="244" fill="#e6edf3"><tspan font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'DejaVu Sans Mono', monospace">accounts&#160;&#160;&#160;&#160;&#160;:</tspan></text>
+    <text x="26" y="271" fill="#e6edf3"><tspan font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'DejaVu Sans Mono', monospace">&#160;&#160;0x94200cd5…297f8&#160;&#160;balance=999999999.9999925</tspan></text>
+    <text x="26" y="325" fill="#7ee787" font-weight="600"><tspan font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'DejaVu Sans Mono', monospace">$&#160;make&#160;selftest</tspan></text>
+    <text x="26" y="352" fill="#e6edf3"><tspan font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'DejaVu Sans Mono', monospace">[1]&#160;chainId=20270&#160;&#160;height=289&#160;&#160;mining=True</tspan></text>
+    <text x="26" y="379" fill="#56d364"><tspan font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'DejaVu Sans Mono', monospace">[2]&#160;</tspan><tspan font-family="'Noto Sans CJK SC', 'Noto Sans Mono CJK SC', 'PingFang SC', 'Microsoft YaHei', sans-serif">出块正常：</tspan><tspan font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'DejaVu Sans Mono', monospace">289&#160;→&#160;290</tspan></text>
+    <text x="26" y="406" fill="#e6edf3"><tspan font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'DejaVu Sans Mono', monospace">[3]&#160;</tspan><tspan font-family="'Noto Sans CJK SC', 'Noto Sans Mono CJK SC', 'PingFang SC', 'Microsoft YaHei', sans-serif">交易已提交：</tspan><tspan font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'DejaVu Sans Mono', monospace">0x6b70f5fdd15ef9fe8b59c165f587b84dfa1ac48b009d925c9356dd3e30de586b</tspan></text>
+    <text x="26" y="433" fill="#56d364"><tspan font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'DejaVu Sans Mono', monospace">[4]&#160;</tspan><tspan font-family="'Noto Sans CJK SC', 'Noto Sans Mono CJK SC', 'PingFang SC', 'Microsoft YaHei', sans-serif">回执</tspan><tspan font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'DejaVu Sans Mono', monospace">&#160;status=0x1&#160;block=292</tspan></text>
+    <text x="26" y="460" fill="#56d364"><tspan font-family="'Noto Sans CJK SC', 'Noto Sans Mono CJK SC', 'PingFang SC', 'Microsoft YaHei', sans-serif">全部通过：链在出块、交易能打包。</tspan></text>
+    <text x="26" y="514" fill="#8b949e"><tspan font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'DejaVu Sans Mono', monospace">INFO&#160;[11-20|15:44:02.996]&#160;Successfully&#160;sealed&#160;new&#160;block&#160;&#160;number=292&#160;hash=8a1f3c..d47b02&#160;elapsed=3.001s</tspan></text>
+    <text x="26" y="541" fill="#8b949e"><tspan font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'DejaVu Sans Mono', monospace">INFO&#160;[11-20|15:44:05.999]&#160;Commit&#160;new&#160;sealing&#160;work&#160;&#160;&#160;&#160;&#160;&#160;&#160;number=293&#160;txs=0&#160;gas=0&#160;fees=0</tspan></text>
+  </g>
+</svg>

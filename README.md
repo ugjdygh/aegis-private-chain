@@ -1,5 +1,9 @@
 # AEGIS 私有链（go-ethereum / Clique PoA）
 
+**中文 | [English](README.en.md)**
+
+![运行实录：make status 与 make selftest](docs/screenshot.svg)
+
 一条自己完全掌控的以太坊兼容链：**自己定 chainId、自己当出块人、数据只在本机/内网**。
 适合做 DApp 联调、合约预演、内部演示，不接主网。
 
@@ -17,7 +21,7 @@
 
 三个必须记住的坑（都在脚本里修好了）：
 
-1. **Clique 不认 shanghai/cancun 区块结构**：genesis 里写了 `shanghaiTime`，节点自己照出块，但邻居节点同步时报 `clique does not support shanghai fork` 直接断连。所以 legacy 档把 shanghai/cancun 全删掉，链是 **pure London** ——合约必须用 `evmVersion: "london"` 编译（`solc` 编译时加 `evmVersion: "london"`，否则 0.8.26 默认产出的 PUSH0 指令在这条链上是非法指令）。
+1. **Clique 不认 shanghai/cancun 区块结构**：genesis 里写了 `shanghaiTime`，节点自己照出块，但邻居节点同步时报 `clique does not support shanghai fork` 直接断连。所以 legacy 档把 shanghai/cancun 全删掉，链是 **pure London** ——合约必须用 `evmVersion: 'london'` 编译（`solc` 编译时加 `evmVersion: "london"`，否则 0.8.26 默认产出的 PUSH0 指令在这条链上是非法指令）。
 2. **第二节点必须错开 `--authrpc.port`**：geth 默认都抢 8551，第二个节点直接 `bind: address already in use` 起不来。已固定成节点1=8551、节点2=8552。
 3. `--unlock` 走 HTTP 会被 geth 拒绝（`Account unlock with HTTP access is forbidden!`），必须带 `--allow-insecure-unlock`；这只在 127.0.0.1 上安全，别照搬到公网。
 
@@ -44,7 +48,7 @@ go-ethereum 每个大版本都在收紧 PoA 私链能力，实测结论：
 所以**先把 geth 锁到 1.13.15**，再跑本包脚本：
 
 ```bash
-# 方式1（有 Go 环境，注意锁 go1.21 工具链，否则 memsize 链接失败）
+# 方式1（有 Go 环境；必须锁 go1.21 工具链，否则 1.13 会撞 memsize 链接错误）
 GOTOOLCHAIN=go1.21.13 GOBIN=$HOME/go/bin go install github.com/ethereum/go-ethereum/cmd/geth@v1.13.15
 export PATH=$HOME/go/bin:$PATH && geth version    # 应显示 1.13.15-stable
 
@@ -215,6 +219,7 @@ private-chain/
 ├── scripts/00-install-geth.sh    # 装可用版本 geth（1.13.15）
 ├── scripts/01~09*.sh             # 建账户 → 创世 → 初始化 → 启动 → 状态 → 加节点 → 停 → 自检 → 对外监听
 ├── Makefile
+├── docs/                         # 截图与发布说明
 ├── keystore/                     # 账户私钥（与 chaindata 分离，reset 不会误删）
 └── chaindata/                    # 链数据，可随时重建
 ```
@@ -222,3 +227,5 @@ private-chain/
 ## 边界
 
 自建私有链用于开发与内部验证：不做代币发行募资、不对接交易平台、不对公网开放 RPC。
+
+MIT 许可 — 见 [LICENSE](LICENSE)。

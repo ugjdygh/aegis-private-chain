@@ -1,0 +1,9 @@
+chaindata/
+chaindata-node2/
+keystore/
+password.txt
+.address
+.account.log
+backup/
+*.log
+geth.ipc
